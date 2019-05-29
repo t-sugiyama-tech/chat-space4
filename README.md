@@ -7,8 +7,8 @@ application up and running.
 
 |Column|Type|Options|
 |------|----|-------| 
-|user_name|string|null: false, unique: true, index: true|
-|user_email|string|null: false, unique: true|
+|name|string|null: false, unique: true, index: true|
+
 
 ### Assocition  
 - has_many :groups, through::group_users 
@@ -19,7 +19,7 @@ application up and running.
 
 |Column|Type|Options|
 |------|----|-------| 
-|group_name|string|null: false, unique:true|
+|name|string|null: false, unique:true|
 
 ### Assocition 
 - has_many :users, through::group_users
@@ -30,7 +30,7 @@ application up and running.
 
 |Column|Type|Options|
 |------|----|-------| 
-|body|text|null:false|
+|body|text|
 |image|string|
 |group|references|foreign_key:true|
 |user|references|foreign_key:true|
@@ -43,8 +43,8 @@ application up and running.
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group

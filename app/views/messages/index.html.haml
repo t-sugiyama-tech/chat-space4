@@ -1,0 +1,63 @@
+.wrapper
+  .side-contents
+    .side-header
+      .side-header__user-name 
+        ユーザーネーム
+      %ul.side-header__user-menu
+        %li.list
+        = link_to do
+          =fa_icon "pencil-square-o", class: 'icon'
+        %li.list
+        = link_to do
+          =fa_icon "cog", class: 'icon'
+    .side-body
+      .group
+        .group__group-name 
+          グループ名
+        .group__latst-message
+          コメント
+      .group
+        .group__group-name 
+          グループ名
+        .group__latest-message
+          コメント
+
+  .main-contents
+    .message-header
+      .group-name 
+        .group-name__title
+          グループ名
+        %ul.group-name__member-list 
+          Member ： 
+          %li.member 
+            メンバー名
+          %li.member 
+            メンバー名 
+      
+      .header-button
+        .header-button__edit
+          Edit
+        
+    .message-box
+      .message 
+        .post-info
+          .post-info__user-name
+            ユーザー
+          .post-info__time 
+            投稿日時
+        .user-message
+          .user-message__content 
+            メッセージ 
+    .form
+      %form
+        %input.form__message
+        .form__mask
+          %label.form__mask__image
+            = fa_icon 'picture-o', class: 'icon'
+            %input.hidden{type: 'file'}
+        %input.form__submit{type: 'submit', value: 'Send'}
+
+
+    
+      
+    

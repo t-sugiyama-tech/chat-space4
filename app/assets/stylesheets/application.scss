@@ -1,6 +1,12 @@
 @import "./config/reset";
 @import "font-awesome";
+@import "./mixins/vendor_prefix";
+@import "./mixins/mixin"; 
 @import "./config/variable";
 @import "./config/font-size";
-@import "./modules/index.scss"
-
+@import "./modules/chat";
+@import "./modules/user";
+@import "./modules/flash";
+@import "./modules/group";
+@import "./modules/side_bar";
+@import "./messages/messages.scss"

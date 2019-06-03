@@ -16,6 +16,7 @@ module ChatSpace4
       g.javascripts false
       g.helper false
       g.test_framework false
-    end
+    end 
+    config.i18n.default_locale = :ja
   end
 end

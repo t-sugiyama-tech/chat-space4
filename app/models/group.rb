@@ -9,13 +9,7 @@ class Group < ApplicationRecord
       last_message.content? ? last_message.content : '画像が投稿されています' 
     else
       'まだメッセージはありません。'
-    end　
-
-    # if last_message.content?
-    #   last_message.content
-    #  else
-    #    '画像が投稿されています'
-    #  end
+    end
   end
 end 
                       

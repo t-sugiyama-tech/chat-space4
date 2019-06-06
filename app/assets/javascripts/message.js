@@ -43,6 +43,7 @@ $(document).on('turbolinks:load', function(){
     .fail(function(data){
       alert('error');
       $('.form__submit').prop('disabled', false);
+    
     }) 
   }) 
 })

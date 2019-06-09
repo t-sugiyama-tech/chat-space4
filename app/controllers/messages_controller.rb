@@ -6,13 +6,6 @@ class MessagesController < ApplicationController
     @messages = @group.messages.includes(:user)
   end
   
-  def update 
-    @message = @group.messages.new(message_params).order("created_at DESC")
-    respond_to do |format| 
-      format.json 
-    end 
-  end
-
   def create
     @message = @group.messages.new(message_params)
     if @message.save
